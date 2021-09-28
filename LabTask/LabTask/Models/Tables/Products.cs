@@ -70,7 +70,7 @@ namespace LabTask.Models.Tables
 
         public void UpdateProduct(Product p,int id)
         {
-            string query = "UPDATE Products SET ProductName='" + p.ProductName + "'Price='"+p.Price+ "'Quantity='"+p.Quantity+"' WHERE Id=" + id;
+            string query = "UPDATE Products SET ProductName='" + p.ProductName + "',Quantity='" + p.Quantity + "',Price='" + p.Price + "' WHERE Id=" + id;
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
             cmd.ExecuteNonQuery();
