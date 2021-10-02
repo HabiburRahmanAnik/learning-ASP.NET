@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using LabTask.Models;
 using LabTask.Models.Entity;
 
@@ -10,6 +11,8 @@ namespace LabTask.Controllers
 {
     public class ProductController : Controller
     {
+        private object products;
+
         // GET: Product
         public ActionResult Index()
         {
@@ -69,6 +72,47 @@ namespace LabTask.Controllers
             Database db = new Database();
             var p = db.Products.GetProductById(id);
             return View(p);
+        }
+
+        [HttpGet]
+        public ActionResult Card(int id)
+        {
+            List<Product> products = null;
+            Database db = new Database();
+            var product = db.Products.GetProductById(id);
+
+            if(Session["card"] == null)
+            {
+                products = new List<Product>();
+                products.Add(product);
+                string json = new JavaScriptSerializer().Serialize(products);
+                Session["card"] = json;
+                return View(products);
+            }
+            else
+            {
+                var item = Session["card"].ToString();
+                products = new JavaScriptSerializer().Deserialize<List<Product>>(item);
+                products.Add(product);
+                string json = new JavaScriptSerializer().Serialize(products);
+                Session["card"] = json;
+                return View(products);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Cart()
+        {
+            List<Product> products = new List<Product>();
+            var item = Session["card"].ToString();
+            products = new JavaScriptSerializer().Deserialize<List<Product>>((string)item);
+
+            Database db = new Database();
+            db.Orders.AddOrderToCard(products);
+
+            Session["card"] = null;
+
+            return RedirectToAction("Index");
         }
 
     }
