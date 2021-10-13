@@ -88,7 +88,15 @@ namespace LabTask.Models.Tables
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+
+        public void CancelOrder(int id)
+        {
             conn.Open();
+            string query = string.Format("delete Orders where Id='{0}'", id);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
     }

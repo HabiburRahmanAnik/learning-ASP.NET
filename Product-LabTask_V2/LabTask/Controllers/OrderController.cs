@@ -41,5 +41,14 @@ namespace LabTask.Controllers
             db.Orders.StatusUpdate(id);
             return RedirectToAction("Orders");
         }
+
+        public ActionResult Cancel(int id)
+        {
+            Database db = new Database();
+            db.Orders.CancelOrder(id);
+            return RedirectToAction("Orders");
+            
+
+        }
     }
 }
