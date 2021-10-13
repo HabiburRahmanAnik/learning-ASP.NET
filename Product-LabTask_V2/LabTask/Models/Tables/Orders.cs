@@ -50,7 +50,7 @@ namespace LabTask.Models.Tables
             return orders;
         }
 
-        public User Name(int id) 
+        public User GetUserNameByUserId(int id) 
         {
             User user = null;
             int userId = 0;
@@ -79,6 +79,16 @@ namespace LabTask.Models.Tables
             }
             conn.Close();
            return user;
+        }
+
+        public void StatusUpdate(int id)
+        {
+            conn.Open();
+            string query = string.Format("update Orders set Status='{0}' where Id='{1}'","Processing", id);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            conn.Open();
         }
 
     }

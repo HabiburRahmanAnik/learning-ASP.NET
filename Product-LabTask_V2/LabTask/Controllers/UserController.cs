@@ -15,10 +15,7 @@ namespace LabTask.Controllers
         {
             return View();
         }
-        [AllowAnonymous]
-        public ActionResult Customer()
-        {
-            return View();
-        }
+       
+        
     }
 }

@@ -229,11 +229,12 @@
     <Content Include="Views\Product\ViewDetails.cshtml" />
     <Content Include="Views\Product\Card.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\User\Customer.cshtml" />
     <Content Include="Views\Order\Orders.cshtml" />
+    <Content Include="Views\Order\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

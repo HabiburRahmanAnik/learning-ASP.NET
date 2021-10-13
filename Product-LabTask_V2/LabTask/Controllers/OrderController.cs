@@ -28,14 +28,18 @@ namespace LabTask.Controllers
 
         public ActionResult Details(int Id)
         {
-            /*Entities db = new Entities();
+            Entities db = new Entities();
             var details = (from o in db.Orders
                           where o.Id == Id
                           select o).FirstOrDefault();
-            return View(details);*/
+            return View(details);
+        }
+
+        public ActionResult Process(int id)
+        {
             Database db = new Database();
-            var user = db.Orders.Name(Id);
-            return View(User);
+            db.Orders.StatusUpdate(id);
+            return RedirectToAction("Orders");
         }
     }
 }
