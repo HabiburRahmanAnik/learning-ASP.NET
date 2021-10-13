@@ -18,5 +18,24 @@ namespace LabTask.Controllers
             var myOrder = db.Orders.MyOrder();
             return View(myOrder);
         }
+
+        public ActionResult Orders()
+        {
+            Entities db = new Entities();
+            var orders = db.Orders.ToList();
+            return View(orders);
+        }
+
+        public ActionResult Details(int Id)
+        {
+            /*Entities db = new Entities();
+            var details = (from o in db.Orders
+                          where o.Id == Id
+                          select o).FirstOrDefault();
+            return View(details);*/
+            Database db = new Database();
+            var user = db.Orders.Name(Id);
+            return View(User);
+        }
     }
 }

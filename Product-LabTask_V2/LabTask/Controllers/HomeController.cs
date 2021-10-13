@@ -46,7 +46,7 @@ namespace LabTask.Controllers
 
                 if (user.Type == 1)
                 {
-                    return RedirectToAction("Index", "Product");
+                    return RedirectToAction("Orders", "Order");
                 }
                 else
                 {

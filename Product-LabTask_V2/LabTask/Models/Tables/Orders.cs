@@ -49,5 +49,37 @@ namespace LabTask.Models.Tables
             }
             return orders;
         }
+
+        public User Name(int id) 
+        {
+            User user = null;
+            int userId = 0;
+            conn.Open();
+            string query = string.Format("select UserId from Orders where Id='{0}'", id);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                userId = reader.GetInt32(reader.GetOrdinal("UserId"));
+            }
+            conn.Close();
+            conn.Open();
+            
+            string query2 = string.Format("select * from Users where Id='{0}'", userId);
+            SqlCommand cmd2 = new SqlCommand(query2, conn);
+            SqlDataReader reader2 = cmd2.ExecuteReader();
+            while (reader2.Read())
+            {
+                user = new User()
+                {
+                    Username = reader2.GetString(reader2.GetOrdinal("Username")),
+                    
+                };
+            }
+            conn.Close();
+           return user;
+        }
+
     }
 }

@@ -230,7 +230,7 @@
     <Content Include="Views\Product\Card.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\User\Customer.cshtml" />
-    <Content Include="Views\Order\MyOrder.cshtml" />
+    <Content Include="Views\Order\Orders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
