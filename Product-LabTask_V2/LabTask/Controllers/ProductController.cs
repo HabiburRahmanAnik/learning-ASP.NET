@@ -43,7 +43,7 @@ namespace LabTask.Controllers
         public ActionResult Update(int id)
         {
             Database db = new Database();
-           var p = db.Products.GetProductById(id);
+            var p = db.Products.GetProductById(id);
             return View(p);
         }
 
@@ -114,7 +114,7 @@ namespace LabTask.Controllers
 
             Session["card"] = null;
 
-            return RedirectToAction("Index");
+            return RedirectToAction("MyOrder","order");
         }
 
     }

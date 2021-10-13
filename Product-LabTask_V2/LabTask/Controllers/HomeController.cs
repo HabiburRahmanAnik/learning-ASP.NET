@@ -50,7 +50,7 @@ namespace LabTask.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Customer", "User");
+                    return RedirectToAction("MyOrder", "Order");
                 }
                 
             }

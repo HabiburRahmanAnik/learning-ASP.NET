@@ -51,6 +51,7 @@ namespace LabTask.Models.Tables
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             List<Product> products = new List<Product>();
+
             while (reader.Read())
             {
                 Product p = new Product()

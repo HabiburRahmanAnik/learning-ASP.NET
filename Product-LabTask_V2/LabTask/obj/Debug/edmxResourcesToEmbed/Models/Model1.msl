@@ -17,6 +17,7 @@
           <ScalarProperty Name="OrderItem" ColumnName="OrderItem" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
