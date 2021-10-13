@@ -41,7 +41,7 @@ namespace LabTask.Controllers
             if (user != null)
             {
                 FormsAuthentication.SetAuthCookie(user.Username, false);
-                //FormsAuthentication.SetAuthCookie(user.Id.ToString(), false);
+                Session["userId"] = user.Id;
 
 
                 if (user.Type == 1)
