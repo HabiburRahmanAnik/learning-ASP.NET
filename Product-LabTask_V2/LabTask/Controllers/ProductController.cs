@@ -66,7 +66,7 @@ namespace LabTask.Controllers
             db.Products.deleteProduct(id);
             return RedirectToAction("Index");
         }
-
+        [AllowAnonymous]
         public ActionResult ViewDetails(int id)
         {
             Database db = new Database();
