@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78a22d8e52dd4c0c87339abe3edebcaa" Name="Diagram1">
+        <EntityTypeShape EntityType="NewsModel.Category" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewsModel.Comment" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewsModel.News" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewsModel.React" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewsModel.User" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="NewsModel.FK_News_Categorys" ManuallyRouted="false" />
+        <AssociationConnector Association="NewsModel.FK_Comments_Comments" ManuallyRouted="false" />
+        <AssociationConnector Association="NewsModel.FK_Comments_News" ManuallyRouted="false" />
+        <AssociationConnector Association="NewsModel.FK_News_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="NewsModel.FK_Reacts_News" ManuallyRouted="false" />
+        <AssociationConnector Association="NewsModel.FK_Reacts_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
