@@ -25,11 +25,20 @@ namespace NewsPortal.Controllers
             CategoryServices.Add(c);
         }
 
-        [Route("api/category/delete")]
-        [HttpGet]
+        [Route("api/category/edit")]
+        [HttpPut]
+        public void Edit(CategoryModel c)
+        {
+            CategoryServices.Edit(c);
+        }
+
+        [Route("api/category/delete/{id}")]
+        [HttpDelete]
         public void Delete(int id)
         {
             CategoryServices.Delete(id);
         }
+
+        
     }
 }

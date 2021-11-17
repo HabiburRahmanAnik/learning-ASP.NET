@@ -35,12 +35,14 @@ namespace DAL
         {
             var category = db.Categorys.FirstOrDefault(n => n.Id == ns.Id);
             db.Entry(category).CurrentValues.SetValues(ns);
+            db.SaveChanges();
         }
 
         public static void DeleteCategory(int id)
         {
             var category = db.Categorys.FirstOrDefault(n => n.Id == id);
             db.Categorys.Remove(category);
+            db.SaveChanges();
         }
 
     }

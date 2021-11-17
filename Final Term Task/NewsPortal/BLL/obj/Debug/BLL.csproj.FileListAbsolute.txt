@@ -12,3 +12,17 @@ F:\11th semester\.NET\NewsPortal\BLL\obj\Debug\BLL.dll
 F:\11th semester\.NET\NewsPortal\BLL\obj\Debug\BLL.pdb
 F:\11th semester\.NET\NewsPortal\BLL\bin\Debug\AutoMapper.dll
 F:\11th semester\.NET\NewsPortal\BLL\bin\Debug\AutoMapper.xml
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\BLL.dll
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\BLL.pdb
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\AutoMapper.dll
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\DAL.dll
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\EntityFramework.dll
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\DAL.pdb
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\DAL.dll.config
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\AutoMapper.xml
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\bin\Debug\EntityFramework.xml
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\obj\Debug\BLL.dll
+C:\Users\anik26452\Desktop\learning-ASP.NET\Final Term Task\NewsPortal\BLL\obj\Debug\BLL.pdb

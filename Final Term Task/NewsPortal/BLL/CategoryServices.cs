@@ -31,6 +31,14 @@ namespace BLL
             CategoryRepo.AddCategory(data);
         }
 
+        public static void Edit(CategoryModel c)
+        {
+            var config = new MapperConfiguration(n => n.CreateMap<CategoryModel, Category>());
+            var mapper = new Mapper(config);
+            var data = mapper.Map<Category>(c);
+            CategoryRepo.EditCategory(data);
+        }
+
         public static void Delete(int id)
         {
             CategoryRepo.DeleteCategory(id);

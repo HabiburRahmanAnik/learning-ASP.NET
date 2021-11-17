@@ -25,5 +25,19 @@ namespace NewsPortal.Controllers
             NewsServices.Add(n);
         }
 
+        [Route("api/news/edit")]
+        [HttpPut]
+        public void Edit(NewsModel n)
+        {
+            NewsServices.Edit(n);
+        }
+
+        [Route("api/news/delete/{id}")]
+        [HttpDelete]
+        public void Delete(int id)
+        {
+            NewsServices.Delete(id);
+        }
+
     }
 }

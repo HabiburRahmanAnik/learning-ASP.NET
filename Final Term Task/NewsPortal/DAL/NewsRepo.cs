@@ -35,12 +35,14 @@ namespace DAL
         {
             var news = db.News.FirstOrDefault(n => n.Id == ns.Id);
             db.Entry(news).CurrentValues.SetValues(ns);
+            db.SaveChanges();
         }
 
         public static void DeleteNews(int id)
         {
             var news = db.News.FirstOrDefault(n => n.Id == id);
             db.News.Remove(news);
+            db.SaveChanges();
         }
 
     }

@@ -26,13 +26,14 @@ namespace BLL
             return data;
         }
 
-        //public static NewsModel GetById(int id)
-        //{
-        //    var config = new MapperConfiguration(c => c.CreateMap<News, NewsModel>());
-        //    var mapper = new Mapper(config);
-        //    var data = mapper.Map<List<NewsModel>>(NewsRepo.GetNewsById(id));
-        //    return data;
-        //}
+        public static void Edit(NewsModel n)
+        {
+            var config = new MapperConfiguration(c => c.CreateMap<NewsModel, News>());
+            var mapper = new Mapper(config);
+            var data = mapper.Map<News>(n);
+            NewsRepo.EditNews(data);
+        }
+
 
         public static void Add(NewsModel n)
         {
@@ -40,6 +41,11 @@ namespace BLL
             var mapper = new Mapper(config);
             var data = mapper.Map<News>(n);
             NewsRepo.AddNews(data);
+        }
+
+        public static void Delete(int id)
+        {
+            NewsRepo.DeleteNews(id);
         }
     }
 }
